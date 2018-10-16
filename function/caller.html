@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        outer();
+        function outer(){
+            var a;
+            inner();
+        }
+        function inner(){
+            console.log(inner.caller);
+            //console.log(arguments.callee.caller)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj={a:1,b:2,c:3};
+    var ary=[1,2,3]
+    for(var o in obj){
+        console.log(o);  //a b c
+    }
+    for(var a in ary){
+        console.log(a); //0 1 2
+    }
+    console.log(obj.toString());    //[object object]
+    console.log(obj.valueOf());    //{a: 1, b: 2, c: 3}
+    console.log(Number(obj));    //NaN
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>1
+        <div>2
+            <div>3</div>
+        </div>
+    </div>
+    <script>
+        for(var i=0;i<3;i++){
+            document.getElementsByTagName("div")[i].addEventListener("click",show.bind(this,i),true);
+        }
+        function show(data) {
+            alert(data);
+        }
+        console.log(Number(5).toString());
+        var str=new String("abc");
+        str.num=1;
+        var str2="abc";
+        str2.num="abc";
+        console.log(str.num);   //1
+        console.log(str2.num);  //undefined
+        console.log(typeof (str)); //object
+        console.log(str2 instanceof String);    //false
+        console.log(str2 instanceof Object);    //false
+        var num=20;
+        console.log(num.toPrecision(4));    //20.00
+        console.log(num.toFixed(4));        //20.0000
+        console.log("abc"<"cde");   //true
+    </script>
+</body>
+</html>

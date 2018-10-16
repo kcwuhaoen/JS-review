@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var date=new Date(Date.parse("2015-02-07"));
+        var date2=new Date(Date.UTC(2015,4,5,17,55,55));
+        var date3=new Date(2018,2);
+        console.log(date.toString());   //Sat Feb 07 2015 08:00:00 GMT+0800 (中国标准时间)
+        console.log(date2.toString());  //Wed May 06 2015 01:55:55 GMT+0800 (中国标准时间)
+        console.log(date3.toString());  //Thu Mar 01 2018 00:00:00 GMT+0800 (中国标准时间)
+    </script>
+</body>
+</html>

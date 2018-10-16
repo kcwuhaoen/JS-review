@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function func(arg1,arg2){
+        console.log(arguments.length);  //arguments长度由实际传入参数个数决定
+        arguments[1]=19;
+        console.log(arguments[1]);
+        console.log(arguments.length);
+    }
+    func(1,2,3,4,5);    //5 19 5
+    func(1);            //1 undefined 1
+</script>
+</body>
+</html>

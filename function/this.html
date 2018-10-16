@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var a=3;
+        var obj={a:1};
+        function getA(){
+            console.log(this.a);
+        }
+        obj.getA=getA;
+        getA();
+        obj.getA();
+        console.log(obj);
+    </script>
+
+</body>
+</html>

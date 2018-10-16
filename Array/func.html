@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var ary=[1,2,3,4,5,6,7,8];
+        var obj={a:1,b:2,c:3};
+        //evary
+        var result1=ary.every(everyFunc,obj);
+        //filter
+        var result2=ary.filter(filterFunc,obj);
+        //forEach
+        ary.forEach(forEachFunc,obj);
+        //some
+        var result3=ary.some(someFunc,obj);
+        //map
+        var result4=ary.map(mapFunc,obj);
+        //reduce
+        var result5=ary.reduce(reduceFunc,4);
+        //reduceRight从数组尾部开始操作
+
+        console.log(result1);    //false
+        console.log(result2);    //[4,5,6,7,8]
+        console.log(result3);   //true
+        console.log(result4);   //[0,2,6,12,20,30,42,56]
+        console.log(result5);   //40   4+1+2+3+4+5+6+7+8
+
+        function reduceFunc(pre,cur,index,array){
+            console.log(pre);
+            return pre+cur;
+        }
+
+
+        function mapFunc(value,index,array){
+            return value*index;
+        }
+
+
+        function forEachFunc(value,index,array){
+            //仅仅执行函数
+        }
+
+        function someFunc(value,index,array){
+            if(value<2){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+
+        function filterFunc(value,index,array){
+            if(value>3){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function everyFunc(value,index,array){
+            console.log(index+this.b);
+
+            if(value<2){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

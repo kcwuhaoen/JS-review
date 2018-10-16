@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var ary=[1,2,3];
+        console.log(ary instanceof Object); //true
+        console.log(ary.toString());    //1,2,3
+        var obj={a:1,b:2};
+        obj.c=3;
+        console.log(obj.c); //3
+        var obj2=obj;
+        obj2.c=3
+        console.log(obj.c); //3
+        function func(data){
+            data=2;
+            // console.log(arguments[0]);
+            var data;
+            this.data=data;
+            console.log(this.data);
+            data=3;
+            this.data=data;
+            console.log(this.data)
+        }
+        func.prototype.setData=function(){
+            this.data=2;
+        }
+        var a=new func(1);
+        // a.setData()
+        // console.log(a.getData());
+        // console.log(a.data);
+    </script>
+</body>
+</html>

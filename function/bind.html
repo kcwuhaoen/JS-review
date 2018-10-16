@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function func(num1,num2){
+            alert(num1+num2);   //3
+            alert(this.a);      //1
+        }
+        var obj={a:1};
+        var func2=func.bind(obj,1,2);
+        func2();
+    </script>
+</body>
+</html>

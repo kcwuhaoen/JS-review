@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //slice返回下标1到下标2-1中间的数值，不改变原数组
+        var ary1=[1,2,3,4,5,6,7];
+        var ary2=ary1.slice(2); //[3,4,5,6,7]
+        var ary3=ary1.slice(2,5);   //[3,4,5]
+        var ary4=ary1.slice(-1);    //7
+        var ary5=ary1.slice(-4,-1); //4,5,6
+        console.log(ary2);
+        console.log(ary3);
+        console.log(ary4);
+        console.log(ary5);
+    </script>
+</body>
+</html>
